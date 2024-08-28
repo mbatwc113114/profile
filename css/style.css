@@ -1,0 +1,154 @@
+:root {
+    --background-color: #1d1d1d;
+    --theme-color: #fdfdfd;
+    --text-color: #ffffff;
+    --text-color-opp: #07ffde;
+    --box-background: rgba(161, 161, 127, 0.2);
+--spacer-value:15vh;
+--image-shadow : rgba(161, 161, 127, 0.2);
+--box-shadow:rgba(161, 161, 127, 0.2);
+}
+
+body {
+    background-color: var(--background-color);
+    background-image: url("../resrc/soild_blue.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+* {
+    margin: auto;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    color: var(--theme-color);
+}
+
+.box {
+
+    backdrop-filter: blur(5px);
+    background-color: var(--box-background);
+    margin: 2px;
+    height: auto;
+    z-index: 1;
+    box-shadow:  0 0 10px 1px var(--box-shadow);
+}
+
+.nav {
+    text-align: center;
+    height: 20px;
+}
+
+.nav a {
+    padding: 10px;
+    position: relative;
+    font-size: 20px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav a:hover {
+    padding: 6px;
+    position: relative;
+    font-size: 22px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text-color-opp);
+}
+
+.profile {
+    height: 50%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.about {
+    /* float: right; */
+    width: fit-content;
+    display: flex;
+    /* transform: translateX(100vw); */
+}
+
+
+
+.skills {
+    /* float: left; */
+    width: fit-content;
+    display: flex;
+    /* transform: translateX(-100vw); */
+    /* margin-right: 40px; */
+}
+
+.image {
+    position: relative;
+    /* float: right; */
+    /* height: 200px; */
+    width: 50vw;
+    box-shadow: 0 0 10px 1px var(--image-shadow);
+}
+
+.product {
+    /* background-image: url("../resrc/dp.jpg");
+        background-size: contain; */
+}
+
+
+.nav-btn:nth-child(1){
+    transition-delay: 100ms;
+}
+.nav-btn:nth-child(2){
+    transition-delay: 100ms;
+}
+.nav-btn:nth-child(3){
+    transition-delay: 100ms;
+}
+
+.nav-btn:nth-child(4){
+    transition-delay: 100ms;
+}
+.picture:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.picture:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.content:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.content:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.hidden {
+    opacity: 0;
+
+    transform: translateX(-100%);
+    transition: all 1s;
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+
+    /* width: 90%; */
+
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.spacer {
+    height: var(--spacer-value);
+}
